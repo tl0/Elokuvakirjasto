@@ -1,5 +1,7 @@
 <div ng-controller="MoviesController">
-    <ul ng-repeat="movie in movies">
-        <li>{{movie.name}}</li>
+    <ul>
+        <li ng-repeat="movie in movies">
+            <a ng-href="#/movie/{{movie.$id}}">{{movie.name}}</a>
+        </li>
     </ul>
 </div>

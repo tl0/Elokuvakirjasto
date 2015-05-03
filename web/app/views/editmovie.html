@@ -1,0 +1,14 @@
+<div ng-controller="MovieEditController">
+    <form name="form">
+        <h1>Muokkaa lefua</h1>
+        Nimi: <input type="text" ng-model="movie.name" required><br>
+        Ohjaaja: <input type="text" ng-model="movie.director" required><br>
+        Vuosi: <input type="number" ng-model="movie.year" required><br>
+        Kuvaus: <textarea ng-model="movie.desc" required></textarea><br>
+        <div ng-show="form.$invalid">
+            VIRHEITÄ!!!!!!
+        </div>
+        <input type="submit" ng-click="save()" value="Save" ng-disabled="form.$invalid">
+        
+    </form>
+</div>

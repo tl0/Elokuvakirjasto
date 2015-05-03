@@ -9,7 +9,7 @@ app.service('FirebaseService', function($firebase) {
         movies.$add(i);
     }
     this.getMovie = function(i) {
-        $firebase(ref.child("movies").child(i)).$asObject();
+        return $firebase(ref.child("movies").child(i)).$asObject();
     }
     this.updateMovie = function(i) {
         movies.$save(i);
