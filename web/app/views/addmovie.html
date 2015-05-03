@@ -1,0 +1,14 @@
+<div ng-controller="NewMovieController">
+    <form name="form">
+        <h1>Uusi lefu</h1>
+        Nimi: <input type="text" ng-model="name" required><br>
+        Ohjaaja: <input type="text" ng-model="director" required><br>
+        Vuosi: <input type="number" ng-model="year" required><br>
+        Kuvaus: <textarea ng-model="desc" required></textarea><br>
+        <div ng-show="form.$invalid">
+            VIRHEITÄ!!!!!!
+        </div>
+        <input type="submit" ng-click="addmovie()" value="Add" ng-disabled="form.$invalid">
+        
+    </form>
+</div>
